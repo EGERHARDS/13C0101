@@ -1,0 +1,368 @@
+:root {
+  --main-text: "Rubik", sans-serif;
+  --sub-text: "Rubik", sans-serif;
+  --title-text: "Rubik", sans-serif;
+  --h1-text: "Rubik", sans-serif;
+  --h2-text: "Rubik", sans-serif;
+  --base-size: 1rem;
+  --title-size: 4.209rem;
+  --h2-size: 3.157rem;
+  --h3-size: 1.777rem;
+}
+
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Color Properties */
+:root {
+  --color-darker: rgb(48, 48, 48);
+  --color-dark: rgb(64, 64, 64);
+  --color-light: rgb(194, 194, 194);
+  --color-lighter: rgb(255, 255, 255);
+  --ui-color-dark: #212e2d;
+  --ui-color-light: #e2e7dd;
+  --ui-color-accent: #ffe40c;
+  /* you could add an accent color for CTAs and anchor tags ;-) */
+}
+
+/* Fonts */
+html {
+  font-size: var(--base-size);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-darker);
+}
+
+h1 {
+  font-family: var(--title-text);
+  font-size: var(--title-size);
+  line-height: 4rem;
+}
+
+h2 {
+  font-family: var(--h2-text);
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-family: var(--h3-text);
+  font-size: var(--h3-size);
+}
+
+p {
+  color: var(--color-dark);
+  font-size: var(--base-size);
+  font-family: var(--main-text);
+  line-height: 1.5rem;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-darker);
+  color: var(--color-lighter);
+  font-family: var(--main-text);
+  font-weight: 400;
+}
+
+.light_button {
+  background-color: var(--color-lighter);
+  color: var(--color-darker);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 2rem;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: var(--color-lighter);
+  border-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--ui-color-accent);
+}
+
+nav a {
+  color: var(--ui-color-dark);
+  text-decoration: none;
+  font-family: var(--title-text);
+  font-size: var(--h3-size);
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--ui-color-dark);
+}
+
+.header_text {
+  font-family: var(--sub-text);
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+  width: 40vw;
+  min-width: 300px;
+}
+
+.header_text h1 {
+  color: var(--color-lighter);
+}
+
+.header_text p {
+  color: var(--color-light);
+  font-style: italic;
+}
+
+.header_graphics {
+  width: 35vw;
+  height: 35vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: var(--color-darker);
+}
+
+/* Sections */
+#intro {
+  display: flex;
+  min-height: 80vh;
+  padding: 0px 15rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--ui-color-accent);
+}
+
+.intro_text {
+  width: 40vw;
+  min-width: 450px;
+  font-family: var(--title-text);
+  font-style: italic;
+}
+
+.intro_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  background-color: var(--color-dark);
+}
+
+#cards {
+  min-height: 80vh;
+  padding: 5rem 2rem;
+  background-color: var(--ui-color-light);
+}
+
+#cards p {
+  font-style: italic;
+  padding: 1rem;
+}
+
+#card_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--ui-color-light);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid var(--color-light);
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 23rem;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px var(--ui-color-accent);
+}
+
+.card img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card a {
+  color: var(--ui-color-dark);
+}
+
+.card h3,
+.card p {
+  color: var(--color-darker);
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
+  color: var(--color-lighter);
+  transition: background-color 0.3s ease;
+  background-color: var(--ui-color-dark);
+}
+
+.btn:hover {
+  background-color: var(--ui-color-light);
+  color: var(--color-light);
+}
+
+.card_button_positive {
+  color: var(--color-lighter);
+}
+
+.card_button_negative {
+  color: var(--color-lighter);
+}
+
+.card_name {
+  font-family: var(--title-text);
+  padding: 0.3rem;
+}
+
+.card_slogan {
+  font-weight: 300;
+}
+
+.card_slogan::before {
+  content: open-quote;
+}
+
+.card_slogan::after {
+  content: close-quote;
+}
+
+#info {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ui-color-dark);
+  color: var(--color-lighter);
+}
+
+.info_text {
+  width: 60vw;
+  min-width: 300px;
+  font-family: var(--main-text);
+}
+
+.info_text p {
+  color: var(--color-lighter);
+  padding: 2rem 0rem;
+}
+
+.info_text h2 {
+  color: var(--ui-color-accent);
+}
+
+#info button {
+  background-color: var(--ui-color-dark);
+  border: solid;
+  border-color: var(--ui-color-accent);
+  transition: background-color 0.3s ease;
+}
+
+#info button:hover {
+  background-color: var(--ui-color-accent);
+  color: var(--ui-color-dark);
+}
+
+#contact {
+  display: flex;
+  min-height: 80vh;
+  padding-left: 2rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--ui-color-accent);
+}
+
+#contact h2 {
+  color: var(--ui-color-dark);
+}
+
+#contact button {
+  color: var(--color-dark);
+  background-color: var(--color-lighter);
+}
+
+#contact button:hover {
+  color: var(--ui-color-accent);
+  background-color: var(--ui-color-dark);
+  transition: background-color 0.3s ease;
+}
+
+input {
+  font-family: var(--main-text);
+  font-weight: 400;
+  padding: 0.5rem;
+  border-style: hidden;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--ui-color-dark);
+  font-family: var(--main-text);
+}
+
+footer h2,
+footer h3 {
+  color: var(--color-lighter);
+}
+
+footer a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--ui-color-accent);
+  transition: color 0.3s ease;
+}
+
+footer section {
+  display: flex;
+  max-width: 50vw;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
+
+footer section ul {
+  text-decoration: none;
+}
